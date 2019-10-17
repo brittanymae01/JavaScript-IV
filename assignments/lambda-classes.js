@@ -37,7 +37,9 @@ class Student extends Person {
     }
 
     listSubjects() {
-        return `First: ${this.favSubjects[0]}, Second: ${this.favSubjects[1]}, Third: ${this.favSubjects[2]}`;
+        this.favSubjects.forEach(function (element) {
+            console.log(element);
+        });
     }
 
     PRAssignment(subject) {
@@ -126,7 +128,7 @@ const joe = new Student({
 console.log(britt.speak());
 console.log(britt.demo('JavaScript'));
 console.log(josh.grade(jessica, 'JavaScript'));
-console.log(jessica.listSubjects());
+jessica.listSubjects();
 console.log(jessica.PRAssignment('JavaScript'));
 console.log(joe.sprintChallenge('React'));
 console.log(kevin.standUp('Web25'))
